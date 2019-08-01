@@ -7,7 +7,7 @@ def dategenerator(start, end):
     current = start
 
     if start > end:
-        print "Please input a valid start-end date."
+        print ("Please input a valid start-end date.")
         yield
 
     while current <= end:
@@ -17,7 +17,7 @@ def dategenerator(start, end):
 def everyday(date):
     number = random.randint(1, 10)
     datestr = str(date)
-    for num in xrange(1, number):
+    for num in range(1, number):
         f = open("cheat.txt", "w")
         writenumber = random.uniform(0, 100)
         f.write(str(writenumber))
@@ -28,7 +28,7 @@ def everyday(date):
         os.system(addfile)
         os.system(commit)
 
-    print datestr + "committed " + str(number) + "time(s)."
+    print (datestr + "committed " + str(number) + "time(s).")
 
 
 def main(argv):
